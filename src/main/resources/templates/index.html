@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <title>Split the word</title>
+    <script>document.write('<base href=/employees/>');</script>
+    
+	<script data-require="angulra.js@1.5.x" src="https://code.angularjs.org/1.5.8/angular.min.js" data-semver="1.5.8"></script>
+	<script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+	<script th:src="@{/app.js}"></script>
+	<link th:href="@{/bulma.min.css}" rel="stylesheet" />
+    <link th:href="@{/style.css}" rel="stylesheet" /> 
+  </head>
+
+  <body  ng-app="plunker" ng-controller="MainCtrl">
+         <section class="hero is-fullheight"> 
+     	 <table border="0" width="100%">
+     	 <thead>
+          <div class="hero-head">
+            <nav class="navbar is-dark">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="http://www.wotsoc.org:5000/">
+                            <img src="/HeadWord/logo.png" height="40">
+                            WoTSoC
+                        </a>
+                        <a class="navbar-item" href="http://www.wotsoc.org:5000/#">
+                        </a>
+                    
+                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuHeroA">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a href="http://www.wotsoc.org:5000/" class="navbar-item">
+                                    Home
+                                </a>
+                                <a href="http://www.wotsoc.org:5000/login" class="navbar-item">
+                                    Login
+                                </a>
+                                <a href="http://www.wotsoc.org:5000/signup" class="navbar-item">
+                                    Sign Up
+                                </a>
+                            </div>
+                    </div>
+            </nav>
+          </div>
+        </thead>
+        <tr><td>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+			  <table border="1" width="100%">
+				<tr>
+				  <td>	
+				  <h1 class="title">
+					 சொல் பிரித்தல் 
+				  </h1>
+				  </td>
+				</tr>
+				<tr>
+				 <td>	
+				  <form ng-submit="submitWord()">
+					 <table border="1" width="100%">
+						<tr>
+						   <td>Enter a text or paragraph</td>
+						</tr>
+						<tr>
+							<td>
+								<textarea style="width:90%;height:60%" ng-model="wordForm.sentence"></textarea>
+							</td>
+						</tr>
+						<tr>
+						   <td colspan="2">
+							  <input type="hidden" name="uid" ng-model="wordForm.uid">
+							  <input type="submit" value="Submit" class="blue-button"/>
+						   </td>
+						</tr>
+						
+					  </table>
+				  </form>
+				  <br/>
+				  </td>
+			    </tr>
+				<tr>
+				<td>
+		      <table border="0" width="100%" class="grid">
+		         <tr >
+		            <th>சொல்</th>
+		            <th>Item 1</th>
+		            <th>Item 2</th>
+		            <th>Item 3</th>
+					<th>Item 4</th>
+					<th>Item 5</th>
+					<th>Item 6</th>
+					<th>Item 7</th>
+					<th>Item 8</th>
+					<th>Item 9</th>
+					<th>Item 10</th>
+					<th>Item 11</th>
+				 </tr>
+		         <!-- $scope.words -->
+		         <tr data-ng-repeat="word in words" >
+		            <td> 
+		            		<span ng-style="{'color':'white'}">{{ word.key }}</span>
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item1}}</span>
+		            		<span ng-style="{'color':word.item1_1.indexOf('NA') !==-1 ? 'red' : 'yellow' }">{{word.item1_1}}</span>
+		            </td>
+					<td>
+							<span ng-style="{'color':'white'}">{{word.item2}}</span>
+		            		<span ng-style="{'color':'#00FF00'}">{{word.item2_1}}</span>
+		            </td>
+					<td>
+							<span ng-style="{'color':'white'}">{{word.item3}}</span>
+		            		<span ng-style="{'color':'#00FFFF'}">{{ word.item3_1}}</span> 
+		            </td>
+					<td>
+							<span ng-style="{'color':'white'}">{{word.item4}}</span>
+		            		<span ng-style="{'color':'#FF00FF'}">{{ word.item4_1}}</span>
+		            </td>
+					<td>
+							<span ng-style="{'color':'white'}">{{word.item5}}</span>
+		            		<span ng-style="{'color':'#FF5733'}">{{ word.item5_1}}</span> 
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item6}}</span>
+		            		<span ng-style="{'color':'#F7DC6F'}">{{ word.item6_1}}</span>
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item7}}</span>
+		            		<span ng-style="{'color':'#A569BD'}">{{ word.item7_1}}</span>
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item8}}</span>
+		            		<span ng-style="{'color':'#A569BD'}">{{ word.item8_1}}</span>
+		            </td>
+		            <td>	
+		            		<span ng-style="{'color':'white'}">{{word.item9}}</span>
+		            		<span ng-style="{'color':'#A569BD'}">{{ word.item9_1}}</span>
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item10}}</span>
+		            		<span ng-style="{'color':'#A569BD'}">{{ word.item10_1}}</span>
+		            </td>
+		            <td>
+		            		<span ng-style="{'color':'white'}">{{word.item11}}</span>
+		            		<span ng-style="{'color':'#A569BD'}">{{ word.item11_1}}</span>
+		            </td>
+		         </tr>
+		      </table>
+			  </td>
+			  </tr>
+			  </table>
+		   </div>
+        </div>
+			  
+	   </section>
+	   </td></tr>
+	   </table> 
+  </body>
+
+</html>

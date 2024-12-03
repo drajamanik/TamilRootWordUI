@@ -1,0 +1,15 @@
+mainConstantFileName=/properties/mainConstant.list 
+ignoreListFileName=/properties/ignore.list  
+parseOrderFileName=/properties/parseOrder.list 
+wordListFileName=/properties/parseWord.list
+resultFileName=/properties/result.txt
+ignoreVerbListFileName=/properties/ignoreVerb.list
+ignoreNounListFileName=/properties/ignoreNoun.list
+ignorePersonListFileName=/properties/ignorePerson.list
+ignorePlaceListFileName=/properties/ignorePlace.list
+uniqueListFileName=/properties/uniqueList.list
+parseFileName=/properties/parseFile.txt
+mainParseMapFileName=/properties/main_parse_map.list
+specialCharacterFileName=/properties/specialCharacter.list
+conditionalFileName=/properties/condition_rule.list
+preFixFileName=/properties/prefix.list

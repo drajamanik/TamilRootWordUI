@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Split the word</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    
+	<script data-require="angulra.js@1.5.x" src="https://code.angularjs.org/1.5.8/angular.min.js" data-semver="1.5.8"></script>
+	<script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+	<script th:src="@{/app.js}"></script>
+    <link th:href="@{/style.css}" rel="stylesheet" /> 
+  </head>
+
+  <body  ng-app="plunker" ng-controller="MainCtrl">
+	  <table border="1" width="100%">
+		<tr>
+		  <td>	
+		  <h3>
+			 Split the word 
+		  </h3>
+		  </td>
+		</tr>
+		<tr>
+		 <td>	
+		  <form ng-submit="submitWord()">
+			 <table border="1" width="100%">
+				<tr>
+				   <td>Enter a text or paragraph</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea style="width:90%;height:60%" ng-model="wordForm.sentence"></textarea>
+					</td>
+				</tr>
+				<tr>
+				   <td colspan="2">
+					  <input type="submit" value="Submit" class="blue-button"/>
+				   </td>
+				</tr>
+				
+			  </table>
+		  </form>
+		  <br/>
+		  </td>
+	    </tr>
+		<tr>
+		<td>
+      <table border="1">
+         <tr>
+            <th>Key </th>
+            <th>Item 1</th>
+			<th>Item 2</th>
+			<th>Item 3</th>
+			<th>Item 4</th>
+			<th>Item 5</th>
+			<th>Item 6</th>
+			<th>Item 7</th>
+			<th>Item 8</th>
+			<th>Item 9</th>
+			<th>Item 10</th>
+			<th>Item 11</th>
+			<th>Item 12</th>
+         </tr>
+         <!-- $scope.words -->
+         <tr data-ng-repeat="word in words">
+            <td> 
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.key }}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item1}}</div>
+            	</div>
+            </td>
+			<td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item2}}</div>
+            	</div>
+            </td>
+			<td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item3}}</div>
+            	</div>
+            </td>
+			<td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item4}}</div>
+            	</div>
+            </td>
+			<td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item5}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item6}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item7}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item8}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item9}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item10}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item11}}</div>
+            	</div>
+            </td>
+            <td>
+            	<div class="response-container"> 
+            		<div ng-animate-swap="data" class="response-text swap-animation">{{ word.item12}}</div>
+            	</div>
+            </td>
+         </tr>
+      </table>
+	  </td>
+	  </tr>
+	  </table>
+  </body>
+
+</html>

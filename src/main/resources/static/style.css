@@ -1,0 +1,64 @@
+body {
+    background-color: 
+    #14AFE5;
+}
+
+.title, .subtitle {
+    color: aliceblue;
+}
+
+.navbar.is-dark {
+    background-color: #363636;
+}
+
+.response-container {
+  display: inline-block;
+  height: 19px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.response-header-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+.response-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  line-height: 42px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.grid tr:nth-child(even){
+	background-color: #00BFFF;
+}
+
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+  transition: 0.5s linear all;
+}
+.swap-animation.ng-enter {
+  top: -29px;
+}
+.swap-animation.ng-enter-active {
+  top :0px;
+}
+.swap-animation.ng-leave {
+  top: 0px;
+}
+.swap-animation.ng-leave-active {
+  top: 29px;
+}
